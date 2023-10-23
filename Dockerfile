@@ -2,7 +2,10 @@ FROM python:3.9.18-bookworm
 
 #RUN apt-get update && apt-get install -y python3 python3-pip
 
-RUN pip install flask, requests, oracledb, datetime
+RUN pip install flask
+RUN pip install requests
+RUN pip install oracledb
+RUN pip install datetime
 
 COPY app.py /opt/
 
