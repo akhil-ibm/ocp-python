@@ -215,4 +215,5 @@ def isConsentExpired(consentId,updation_time):
     # return render_template('login.html')
 
 if __name__ == '__main__':
-    app.run(debug=False,host='localhost',port=5004)
+    # app.run(debug=False,host='localhost',port=5004)
+    app.run()
