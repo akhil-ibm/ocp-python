@@ -3,9 +3,9 @@ import base64,requests
 import random, string, uuid, time,oracledb
 from datetime import datetime
 
-app = Flask(__name__)
-app.secret_key = 'uwyfewueyfiwu'
-@app.route('/login')
+login = Flask(__name__)
+login.secret_key = 'uwyfewueyfiwu'
+@login.route('/login')
 def index():
     session['consentId']=request.args.get("consentId")
     
@@ -16,7 +16,7 @@ def index():
 
     return render_template('login.html')
 
-@app.route('/consent',methods=['POST'])
+@login.route('/consent',methods=['POST'])
 def consent():
     try:
         consentId=session['consentId']
@@ -50,7 +50,7 @@ def consent():
     
 
 
-@app.route('/login_get', methods=['POST'])
+@login.route('/login_get', methods=['POST'])
 def login():
     # Render the HTML login page
     # loc=''
@@ -216,4 +216,4 @@ def isConsentExpired(consentId,updation_time):
 
 if __name__ == '__main__':
     # app.run(debug=False,host='localhost',port=5004)
-    app.run()
+    login.run()
