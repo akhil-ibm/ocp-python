@@ -4,6 +4,6 @@ FROM python:3.9.18-bookworm
 
 RUN pip install flask, requests, oracledb, datetime
 
-COPY app.py /opt/
+COPY login.py /opt/
 
-ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=8080
+ENTRYPOINT FLASK_APP=/opt/login.py flask run --host=0.0.0.0 --port=8081
