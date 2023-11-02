@@ -35,6 +35,6 @@ def authstub1():
             return Response(response='{"response": "user not found"}', status=401, mimetype='application/json')
             #return f'Hello,{array}.......{user_dic[array[0]] == array[1]}!'
     return Response(response='{"response": "Authorization header not found"}', status=401, mimetype='application/json')
-app.run(host='localhost',port=5000)
+app.run()
 
 # response should be 200ok with confirmation code
