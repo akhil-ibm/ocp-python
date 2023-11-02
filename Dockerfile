@@ -12,6 +12,6 @@ RUN pip install datetime
 #RUN pip install requirements.txt
 
 COPY app.py /opt/
-COPY login.html /opt/templates
-COPY consent.html /opt/templates
+COPY login.html /opt/templates/
+COPY consent.html /opt/templates/
 ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=8080
