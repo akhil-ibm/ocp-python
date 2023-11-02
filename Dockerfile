@@ -6,6 +6,7 @@ FROM python:3.9.18-bookworm
 #RUN pip install requests
 #RUN pip install oracledb
 #RUN pip install datetime
+COPY requirements.txt .
 RUN pip install requirements.txt
 
 COPY app.py /opt/
