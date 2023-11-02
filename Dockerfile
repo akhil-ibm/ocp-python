@@ -4,9 +4,9 @@ FROM python:3.9.18-bookworm
 #WORKDIR /opt
 
 RUN pip install flask
-#RUN pip install requests
-#RUN pip install oracledb
-#RUN pip install datetime
+RUN pip install requests
+RUN pip install oracledb
+RUN pip install datetime
 
 #COPY requirements.txt .
 #RUN pip install requirements.txt
