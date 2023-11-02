@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Consent</title>
+</head>
+<body>
+    <h1>Account Consent</h1>
+    <form action="/consent" method="POST">
+        <ul>
+            {% for account in accounts['accountNumbers'] %}
+            <li>
+                <input type="radio" name="account" value="{{ account }}"> {{ account }}
+            </li>
+            {% endfor %}
+        </ul>
+        <label for="consent">Consent:</label>
+        <input type="radio" name="consent" value="allow"> Allow
+        <input type="radio" name="consent" value="cancel"> Cancel
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
